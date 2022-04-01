@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KaPKa</title>
+    <meta name="decription" content="Portfolio Kamil Kaszuba" />
+    <meta name="keywords" content="Kamil_Kaszuba, css, html, c#, ASP.Net, EntityFramework, ADO.NET, Backend" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="~/Content/FontelloIcons/css/fontello.css" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/KaPKa.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <section>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-custom topbar">
+                <div class="container-fluid">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img id="logoSrc" class="d-inline-block align-middle" title="Main Page" src="~/Content/img/KapkaWhite.png" alt="" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigation Menu">
+                        <span class="navbar-toggler-icon"> </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Home" asp-action="MeMyselfI" class="nav-link">About me</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Projects</a>
+                                <div class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
+                                    <a asp-area="" asp-controller="Home" asp-action="ReSCat" class="dropdown-item">ReSCat - Desktop App</a>
+                                    <a class="dropdown-item" href="#">KapKa - Web App</a>
+                                    <a class="dropdown-item" href="#">&#181;C Program</a>
+                                    <a class="dropdown-item" href="#">C# SQL Server Connection</a>
+                                    <a class="dropdown-item" href="#">Console Logic Apps</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="nav-link">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id=socialMedia>
+            <div class="margpadd">
+                <a href="https://www.linkedin.com/in/kamil-p-kaszuba" target="_blank" class="socialLink" title="Contact me via Linkedin!"> <i class="icon-linkedin-squared linkedin"></i></a>
+                <a href="https://github.com/Mileek" target="_blank" class="socialLink" title="Check out my GitHub!"><i class="icon-github-squared github"></i></a>
+                <a href="mailto: kamil.p.kaszuba@gmail.com" target="_blank" class="socialLink" title="Contact me via E-mail!"><i class="icon-mail-squared gmail"></i></a>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" title="Go to top"><i class="icon-angle-double-up" id="navUp"></i></button>
+
+        <div class="wrapFooter">
+            <main role="main" class="pb-3 marginContetnt">
+                @RenderBody()
+            </main>
+            <div class="push"></div>
+        </div>
+
+
+
+
+
+
+
+        <footer class="footer bg-dark">
+            <div class="container text-center">
+                <a asp-area="" asp-controller="Home" asp-action="Index"><img width="44" height="30" class="bi" src="~/Content/img/KapkaWhite.png" /></a>
+                <span class="text-muted">&copy; 2022 - Kamil Patryk Kaszuba</span>
+            </div>
+        </footer>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+        @await RenderSectionAsync("Scripts", required: false)
+    </section>
+</body>
+</html>
+

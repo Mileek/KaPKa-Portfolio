@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container-fluid @*marginHome*@ @*overflow-hidden*@">
+    <section>
+        <header>
+            <div class="marginHome">
+                <div class="greetingAlign">
+                    <p class="greeting"><span class="blueNeon" id="headline">Hello</span> <span class="redNeon" id="headline2">there</span></p>
+                </div>
+                <div class="greetingMsgAlign">
+                    <p class="greetingsMsg" id="text"> My name is Kamil and I am working hard to become a programmer. My projects are very diverse, and the site you are looking at right now is one of them ! This page serves as a portfolio to showcase my skills in this field in more detail.</p>
+                </div>
+            </div>
+            <div id=arrows>
+                <p id="socialText">Chceck out my social media!</p>
+                <img id="topBottom" src="~/Content/img/arrowRight.png" />
+                <img id="topLeftRight" src="~/Content/img/arrowRoundRight.png" />
+                <img id="bottomLeftRight" src="~/Content/img/arrowRoundRight.png" />
+                <img id="bottomTop" src="~/Content/img/arrowRight.png" />
+            </div>
+        </header>
+    </section>
+
+    <section class="projectTile">
+        <p id="pointProjects">Check out my projects ! <i class="icon-forward"></i> </p>
+        <div class="row g-0 justify-content-center ">
+
+            <div class="col-sm-6 col-md-5 tileHome ">
+                <figure class="rescatTile">
+                    <a href="#">
+                        <img class="rescatImg" src="~/Content/Img/ReSCat.png">
+                        <figcaption class="rescatDetails">
+                            <h2>ReSCat</h2>
+                            <p>ReSCat was made based on my experience from my previous work to improve its efficiency.</p>
+                        </figcaption>
+                    </a>
+                </figure>
+            </div>
+
+            <div class="col-sm-6 col-md-5 tileHome">
+                <figure class="kapkaTile">
+                    <a href="#">
+                        <img class="kapkaImg" src="~/Content/Img/browserKapka.png">
+                        <figcaption class="kapkaDetails">
+                            <h2>KapKa</h2>
+                            <p>KapKa was created to showcase my knowledge of programming in a deeper way than on github.</p>
+                        </figcaption>
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <div class="row g-0 justify-content-center ">
+
+            <div class="col-sm-6 col-md-4 tileHome">
+                <figure class="ucTile">
+                    <a href="#">
+                        <img class="ucImg" src="~/Content/Img/uCSimulator.png">
+                        <figcaption class="ucDetails">
+                            <h2>&#181;C Program</h2>
+                            <p>&#181;C programs were created during my studies. The idea was to create programs to control Intel 8052 &#181;C.</p>
+                        </figcaption>
+                    </a>
+                </figure>
+            </div>
+
+
+            <div class="col-sm-6 col-md-4 tileHome">
+                <figure class="sqlTile">
+                    <a href="#">
+                        <img class="sqlImg" src="~/Content/Img/SQLConnectionDB.png">
+                        <figcaption class="sqlDetails">
+                            <h2>C# SQL Server Connection</h2>
+                            <p>The program was designed to connect C# and MS SQL. The application run via sql commands.</p>
+                        </figcaption>
+                    </a>
+                </figure>
+            </div>
+
+            <div class="col-sm-6 col-md-4 tileHome">
+                <figure class="cmdTile">
+                    <a href="#">
+                        <img class="cmdImg" src="~/Content/Img/ConsoleApp.png">
+                        <figcaption class="cmdDetails">
+                            <h2>Console Applications</h2>
+                            <p>Selected few console applications created by me. My answers to Anna Kempa and Tomasz Staś book.</p>
+                        </figcaption>
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
+
+@section Scripts{
+<script src="~/js/site.js" asp-append-version="true"></script>
+}
