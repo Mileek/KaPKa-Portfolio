@@ -54,7 +54,7 @@ body, html { /*
     word-spacing: 2px;
     letter-spacing: 1px;
     height: 60px;
-    padding-right:5%;
+    padding-right: 5%;
 }
 
     /* change the brand and text color */
@@ -924,6 +924,7 @@ a.socialLink {
 
 /**/
 /*Me Myself & I*/
+/**/
 
 .paddingTopA {
     padding-top: 36px;
@@ -1251,20 +1252,21 @@ a.socialLink {
     padding-top: 3%;
     text-align: center;
 }
+
     .conclusionA .aboutHeaderA {
         padding-top: 5%;
         color: #e3d3d3;
     }
 
 
-    #graduateOutA {
-        margin-top: 350px;
-        display: inline-block;
-        margin-left: -9px;
-        width: 65vh;
-        height: 150vh;
-        overflow: hidden;
-    }
+#graduateOutA {
+    margin-top: 350px;
+    display: inline-block;
+    margin-left: -9px;
+    width: 65vh;
+    height: 150vh;
+    overflow: hidden;
+}
 
 
 #graduateInA {
@@ -1468,3 +1470,172 @@ a.socialLink {
             right: 3vh;
         }
 }
+
+/**/
+/*ReSCat*/
+/**/
+
+
+.paddingTopR {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.rescatTileStyleR {
+    text-align: justify;
+    background-color: #1d202b;
+}
+
+.introTileR {
+    text-align: center;
+}
+
+#openingNoteR {
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.technologiesR {
+    margin-bottom: 10%;
+}
+
+.introTileR a img {
+    width: 15%;
+    height: 15%;
+}
+
+.technologiesR {
+    margin-top: 10%;
+}
+
+    .technologiesR figure img {
+        width: 15%;
+        height: 15%;
+        display: inline-block;
+    }
+
+#cSharpR {
+    float: left;
+}
+
+#wpfR {
+    float: left;
+}
+
+#entityFrameworkR {
+    padding-top: 1%;
+    margin-left: 10%;
+    width: 20%;
+    height: 20%;
+}
+
+#xamlR {
+    margin-left: 12%;
+}
+
+#closedXmlR {
+    display: inline-block;
+    color: white;
+    font-size: 2vw;
+    border: 3px solid #33D0CF;
+    border-top-left-radius:20px;
+    padding: 5px 15px 5px 15px;
+}
+
+#scottPlott {
+    display: inline-block;
+    color: white;
+    font-size: 2vw;
+    border: 3px solid #33D0CF;
+    border-top-right-radius: 20px;
+    padding: 5px 15px 5px 15px;
+    margin-left: 12%;
+}
+.headerProjects {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.subHeaderProjects {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.gifsR figure img {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50vw;
+    height: auto;
+}
+
+.gifAdd {
+    content: url("../Content/Gif/ReSCatMain.png");
+}
+
+    .gifAdd:hover {
+        content: url("../Content/Gif/ReSCatAddGif.gif");
+    }
+
+.gifDel {
+    content: url("../Content/Gif/ReSCatMain.png");
+}
+
+    .gifDel:hover {
+        content: url("../Content/Gif/ReSCatDeleteGif.gif");
+    }
+
+.gifUpd {
+    content: url("../Content/Gif/ReSCatMain.png");
+}
+
+    .gifUpd:hover {
+        content: url("../Content/Gif/ReSCatUpdateGif.gif");
+    }
+
+.gifCal {
+    content: url("../Content/Gif/ReSCatMain.png");
+}
+
+    .gifCal:hover {
+        content: url("../Content/Gif/ReSCatCalendarGif.gif");
+    }
+
+.gifFilter {
+    content: url("../Content/Gif/ReSCatMain.png");
+}
+
+    .gifFilter:hover {
+        content: url("../Content/Gif/ReSCatFilterGif.gif");
+    }
+
+.gifSearch {
+    content: url("../Content/Gif/ReSCatMain.png");
+}
+
+    .gifSearch:hover {
+        content: url("../Content/Gif/ReSCatSearchGif.gif");
+    }
+
+.gifChart {
+    content: url("../Content/Gif/ReSCatMain.png");
+}
+
+    .gifChart:hover {
+        content: url("../Content/Gif/ReSCatChartsGif.gif");
+    }
+.gifLog {
+    content: url("../Content/Gif/ReSCatMain.png");
+}
+
+    .gifLog:hover {
+        content: url("../Content/Gif/ReSCatLogsGif.gif");
+    }
