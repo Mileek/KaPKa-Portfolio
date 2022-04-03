@@ -22,7 +22,17 @@ namespace KaPKa.Controllers
         {
             return View();
         }
+
         public IActionResult ReSCat()
+        {
+            return View();
+        }
+
+        public IActionResult KapKa()
+        {
+            return View();
+        }
+        public IActionResult uCProgram()
         {
             return View();
         }

@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "KapKa";
+}
+
+
+
+<div class="container paddingTopU rescatTileStyleU">
+    <div class="introTileU">
+        @*Intro*@
+        <p class="headerProjects">About:</p>
+        <p id="openingNoteU">Project was created during my mechatronic studies. The idea was to use mcs51 simulator (that simulates the work of intel 8051) as a medium that will use code created in C to display &#181;C features.</p>
+    </div>
+    <div class="programsU">
+        @*technologies used*@
+        <p claa="subHeaderProjects">Initiation of I2C transmission - reading from the AD converter.</p>
+
+        <p class="textProjects">The idea of first program was meant to inicialize I2C transmision to allow the data from &#181;C simulator be transmited to &#181;C. The program is using ADC to change the values on the screen.</p>
+        <script src="https://gist.github.com/Mileek/dc6a0f8b87951bfd83af85415184dd79.js"></script>
+        <p class="textProjects">The I2C_Send_Byte function sends 8 bits sequentially starting from the oldest bit, then a value is passed to SCL 0>1>0 to confirm the transfer, then a value of 1 is passed to the SDA variable, then the SCL variable is used again to confirm the transfer. I2C_Receive_byte function works in the opposite way, namely its task is to read the previously sent data, so the value of the SDA variable must be 1 at the beginning. read is confirmed with a timer, then SDA changes its value to 0, because the read has finished - the clock comes again. The last step in this function is the acknowledgement that is, we put 9 bars of the clock (NACK) on the data line, this causes data on the line is stopped. Having created the required functions, we proceed to create the program which sets the ADC into operation mode. For this purpose in the main function the start bit, address 10010000, the control register 00000001 and finally the stop bit. Thus written program displays the value from the potentiometer on the display, and in order to continuously read potentiometer, the reading is set in an infinite loop.</p>
+
+    </div>
+
+    <div class="aboutuC">
+        <p></p>
+
+
+    </div>
+    <div>
+        @*Conclusion*@
+        @*<p class="headerProjects">Coclusion:</p>
+        <p class="textProjects">*@
+    </div>
+</div>

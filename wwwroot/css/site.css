@@ -1540,7 +1540,7 @@ a.socialLink {
     color: white;
     font-size: 2vw;
     border: 3px solid #33D0CF;
-    border-top-left-radius:20px;
+    border-top-left-radius: 20px;
     padding: 5px 15px 5px 15px;
 }
 
@@ -1553,6 +1553,7 @@ a.socialLink {
     padding: 5px 15px 5px 15px;
     margin-left: 12%;
 }
+
 .headerProjects {
     margin-top: 5%;
     margin-bottom: 3%;
@@ -1632,10 +1633,106 @@ a.socialLink {
     .gifChart:hover {
         content: url("../Content/Gif/ReSCatChartsGif.gif");
     }
+
 .gifLog {
     content: url("../Content/Gif/ReSCatMain.png");
 }
 
     .gifLog:hover {
         content: url("../Content/Gif/ReSCatLogsGif.gif");
+    }
+
+/**/
+/*KapKa*/
+/**/
+.paddingTopK{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.rescatTileStyleK {
+    text-align: justify;
+    background-color: #1d202b;
+}
+
+.introTileK {
+    text-align: center;
+}
+.introTileK a img{
+    max-height:200px;
+}
+.technologiesK figure img{
+    max-height:150px;
+}
+#cSharpR{
+    float:left;
+    margin-right:5%;
+}
+#htmlR {
+    float: left;
+    margin-right: 5%;
+}
+#cssR {
+    float: left;
+}
+#visualStudioComR {
+    float: left;
+    margin-right: 5%;
+}
+#visualStudioCodR {
+    float:left;
+}
+.question {
+    margin-top:75px;
+    color: #13ed13;
+    font-size:20px;
+    font-weight:600;
+}
+.answer {
+    color: #33D0CF;
+    font-size: 18px;
+    font-style: oblique;
+    font-weight: 600;
+}
+
+#crossK {
+    position: relative;
+    display: inline-block;
+}
+
+    #crossK::before, #crossK::after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+
+    #crossK::before {
+        border-bottom: 1px solid red;
+        -webkit-transform: skewY(-10deg);
+        transform: skewY(-10deg);
+    }
+
+    #crossK::after {
+        border-bottom: 1px solid red;
+        -webkit-transform: skewY(10deg);
+        transform: skewY(10deg);
+    }
+
+/**/
+/*uC Program*/
+/**/
+
+.gist {
+    max-width: 800px;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .gist .blob-wrapper.data {
+        max-height: 500px;
+        overflow: auto;
     }
