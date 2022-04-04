@@ -4,7 +4,6 @@ body, html { /*
     margin-bottom: 120px;*/
     text-align: justify;
     color: #cccccc;
-    /*background-color: #0c1822;*/
     background-color: #151519;
     font-family: 'Lato', sans-serif;
     scroll-behavior: smooth;
@@ -15,6 +14,8 @@ body, html { /*
     min-height: 100%;
     /*padding-top: 40px;*/
     /* margin-bottom: -60px;*/
+    /*overflow-x: hidden;*/
+    z-index: -1 !important;/*hides bg deeper so that content is always on 1st plan*/
 }
 
 
@@ -341,10 +342,38 @@ a.socialLink {
 /**/
 /*Home Page*/
 /**/
+
+.indexBackground {
+    background: linear-gradient(180deg, #228fb3, #2263b3, #224bb3, #2238b3, #2224b3);
+    animation: gradient 8s ease-in-out infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 50% 50%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
 .marginHome {
-    margin-top: 200px;
     margin-left: -12px;
-    margin-right: -72px;
+    margin-right: -12px;
     margin-bottom: 0;
     overflow-y: hidden
 }
@@ -352,13 +381,15 @@ a.socialLink {
 .greetingAlign {
     margin-left: auto;
     margin-right: auto;
-    height: 40vh;
-    background-image: linear-gradient(#151519, #2252b3);
+    margin-top: 30px;
+    padding-top: 10vh;
+    height: 58vh;
+    /*background-image: linear-gradient(#151519, #2252b3);*/
 }
 
 .greeting {
     position: relative;
-    top: 15px;
+    top: 10px;
     margin-left: 25px;
     font-size: 100px;
     letter-spacing: 1px;
@@ -370,15 +401,15 @@ a.socialLink {
     min-height: 32vh;
     height: fit-content;
     padding: 5px;
-    background-color: #2252b3;
+    /*background-color: #2252b3;*/
 }
 
 .greetingsMsg {
     position: relative;
     top: -5px;
     font-size: 30px;
-    margin-left: 152px;
-    margin-right: 152px;
+    margin-left: 10vw;
+    margin-right: 10vw;
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 0;
@@ -476,24 +507,20 @@ a.socialLink {
     height: auto;
 }
 
-.topRImg {
-}
 
 .bottomImg {
     max-height: 300px;
 }
 
-.container-fluid.projectTile {
-}
 
 .projectTile {
     height: fit-content;
-    padding: 0;
+    padding: 5px;
     margin-top: 0px;
     margin-left: -12px;
-    margin-right: -72px;
-    margin-bottom: 40px;
-    background-image: linear-gradient(#2252b3,#0b1e45 );
+    margin-right: -12px;
+    padding-bottom: 60px;
+    /*background-image: linear-gradient(#2252b3,#0b1e45 );*/
 }
 
 .icon-forward:before {
@@ -921,6 +948,106 @@ a.socialLink {
         color: #cccccc;
     }
 
+/*Background strongly inspired by https://codepen.io/osorina */
+
+.contentBg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+    z-index:-1;
+}
+
+.line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 50%;
+    margin: auto;
+    background: transparent;
+}
+
+    .line::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 15%;
+        width: 100%;
+        top: -50%;
+        left: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+        -webkit-animation: drop 12s 0s infinite;
+        animation: drop 12s 0s infinite;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-timing-function: cubic-bezier(0.53, 0.31, 0.12, 0.97);
+        animation-timing-function: cubic-bezier(0.53, 0.31, 0.12, 0.97);
+    }
+
+    .line:nth-child(1) {
+        margin-left: -50%;
+    }
+
+        .line:nth-child(1)::after {
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+
+    .line:nth-child(2) {
+        margin-left: -45%;
+    }
+
+    .line:nth-child(3) {
+        margin-left: 50%;
+    }
+
+        .line:nth-child(3)::after {
+            -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+        }
+
+    .line:nth-child(4) {
+        margin-left: 45%;
+    }
+
+        .line:nth-child(4)::after {
+            -webkit-animation-delay: 1.7s;
+            animation-delay: 1.7s;
+        }
+
+
+@-webkit-keyframes drop {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+@keyframes drop {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
 
 /**/
 /*Me Myself & I*/
@@ -1159,6 +1286,7 @@ a.socialLink {
 }
 
 #meA {
+    z-index:10;
     color: #ffeded;
     animation: fill-red 2s infinite;
     -webkit-animation: fill-red 2s infinite;
@@ -1219,12 +1347,12 @@ a.socialLink {
     font-size: 24px;
     font-weight: 600;
     text-align: center;
-}
+} 
 
-.aboutMeNoteA span {
-    text-decoration: line-through;
-    text-decoration-thickness: .1px;
-}
+    .aboutMeNoteA span {
+        text-decoration: line-through;
+        text-decoration-thickness: .1px;
+    }
 
 
 .aboutMeNoteA a:link,
@@ -1261,26 +1389,16 @@ a.socialLink {
 
 #graduateOutA {
     margin-top: 350px;
+    margin-bottom: 20px;
     display: inline-block;
-    margin-left: -9px;
-    width: 65vh;
-    height: 150vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    height: auto;
     overflow: hidden;
+
+    content: url("../Content/Img/kamilGraduate.jpg");
 }
-
-
-#graduateInA {
-    width: 100%;
-    height: 100%;
-    background-image: url("../Content/Img/kamilGraduate.jpg");
-    background-position: center;
-    background-size: cover;
-    transition: transform 0.6s ease-in-out;
-}
-
-    #graduateInA:hover {
-        transform: scale(1.8);
-    }
 
 .arrowsResumeA {
     float: left;
@@ -1645,7 +1763,7 @@ a.socialLink {
 /**/
 /*KapKa*/
 /**/
-.paddingTopK{
+.paddingTopK {
     padding-top: 50px;
     padding-bottom: 50px;
     letter-spacing: 1px;
@@ -1659,36 +1777,45 @@ a.socialLink {
 .introTileK {
     text-align: center;
 }
-.introTileK a img{
-    max-height:200px;
+
+    .introTileK a img {
+        max-height: 200px;
+    }
+
+.technologiesK figure img {
+    max-height: 150px;
 }
-.technologiesK figure img{
-    max-height:150px;
+
+#cSharpR {
+    float: left;
+    margin-right: 5%;
 }
-#cSharpR{
-    float:left;
-    margin-right:5%;
-}
+
 #htmlR {
     float: left;
     margin-right: 5%;
 }
+
 #cssR {
     float: left;
 }
+
 #visualStudioComR {
     float: left;
     margin-right: 5%;
 }
+
 #visualStudioCodR {
-    float:left;
+    float: left;
 }
+
 .question {
-    margin-top:75px;
+    margin-top: 75px;
     color: #13ed13;
-    font-size:20px;
-    font-weight:600;
+    font-size: 20px;
+    font-weight: 600;
 }
+
 .answer {
     color: #33D0CF;
     font-size: 18px;
@@ -1724,15 +1851,89 @@ a.socialLink {
 /**/
 /*uC Program*/
 /**/
+.uCProgramTileStyleU {
+    text-align: justify;
+    background-color: #1d202b;
+}
+
+.paddingTopU {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.programsU figure img {
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
 
 .gist {
     max-width: 800px;
     overflow: auto;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
     .gist .blob-wrapper.data {
         max-height: 500px;
         overflow: auto;
     }
+
+#uCADC {
+    content: url("../Content/Img/uCADC.png");
+    height: 25vw;
+    width: auto;
+}
+
+#uCCnt {
+    content: url("../Content/Img/uCTime1.png");
+    height: 25vw;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: uCblurOut 0.6s ease-in-out;
+}
+
+    #uCCnt:hover {
+        animation: uCblurIn 0.6s ease-in-out;
+        content: url("../Content/Img/uCTime2.png");
+    }
+
+#uCRTCSM {
+    content: url("../Content/Img/ucRTCSM.png");
+    animation: RTCPhoto 15s linear infinite;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25vw;
+    width: auto;
+}
+
+@-webkit-keyframes RTCPhoto {
+    0% {
+        content: url("../Content/Img/ucRTCSM.png");
+    }
+
+    50% {
+        content: url("../Content/Img/uCRTCHD.png")
+    }
+
+    100% {
+        content: url("../Content/Img/uCRTCY.png")
+    }
+}
+
+@-webkit-keyframes uCblurIn {
+    0% {
+        filter: blur(8px);
+    }
+}
+
+@-webkit-keyframes uCblurOut {
+    0% {
+        filter: blur(8px);
+    }
+}

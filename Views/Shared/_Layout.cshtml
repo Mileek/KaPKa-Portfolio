@@ -62,10 +62,9 @@
         <button onclick="topFunction()" title="Go to top"><i class="icon-angle-double-up" id="navUp"></i></button>
 
         <div class="wrapFooter">
-            <main role="main" class="pb-3 marginContetnt">
+            <main role="main" class="pb-3 @*contentBg*@ @*marginContetnt*@">
                 @RenderBody()
             </main>
-            <div class="push"></div>
         </div>
 
 
@@ -80,6 +79,8 @@
                 <span class="text-muted">&copy; 2022 - Kamil Patryk Kaszuba</span>
             </div>
         </footer>
+
+
 
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
