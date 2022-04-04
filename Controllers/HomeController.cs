@@ -37,6 +37,12 @@ namespace KaPKa.Controllers
             return View();
         }
 
+
+        public IActionResult ContactMe()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

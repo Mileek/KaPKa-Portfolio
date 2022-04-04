@@ -1,7 +1,7 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
+// I am not well versed in JS as of now. Codes below are from other people (with full credits) I only made small changes to suit my needs.
 
 
 //Code by https://stackoverflow.com/questions/15082316/how-to-set-active-class-to-nav-menu-from-twitter-bootstrap/25705971#25705971?newreg=65278c3b47d3454ca8f38c010bcd947e
