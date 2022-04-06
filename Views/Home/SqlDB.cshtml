@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "SqlDB";
+}
+
+
+<div class="contentBg">
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="container paddingTopS sqlDbTileStyleS">
+        <div class="introTileS">
+            @*Intro*@
+            <p class="sideNoteUS"><i>*Program variables are in Polish*</i></p>
+            <p class="headerProjects">About:</p>
+            <p id="openingNoteS">The project was meant to create program that would be able to add records to previously created database in MS SQL. The project was meant to work on raw SQL commands that were used in C# code. Application is using WinForms, MS SQL, C#.</p>
+        </div>
+        <div class="programsS">
+            <p class="subHeaderProjects">Creating DB in MS SQL.</p>
+            <p class="textProjects">Initially, there was a need to create a database with 2 tables that would be updated in the future. One table was empty and its data would be added using the C# language. The other table was already full of records to be interacted by the user.</p>
+            <script src="https://gist.github.com/Mileek/511cad279d8c2c45e53f11cd679f8a2a.js"></script>
+            <figure>
+                <img id="dataBaseImgS" />
+            </figure>
+
+            <p class="subHeaderProjects">Creating C# code.</p>
+            <p class="textProjects">The code below is quite straightforward. First there are the private variables that will be used throughout the whole project. Later, after connecting to the database, commands are used to populate the datagrid with the data inserted in the appropriate textboxes. Buttons initialise actions such as displaying whole data from a table or adding a record to the database. There are also functions responsible for deleting records from the database or updating old values to new ones. The final functionality of the application was to select records from a second table using a simple text field and to display the selected records to the user.<br /> The application was meant to simulate the buying and selling of cars in a car dealer. Additional features could be added to the car we selected from second table. The project is a simple demonstration of how to create a functional database program that will be responsible for adding, updating and deleting records using WinForms as the UI, C# as the main programming language and MS SQL as the database framework.</p>
+            <script src="https://gist.github.com/Mileek/ff735526c14a83a753c5b232b2353ede.js"></script>
+            <figure>
+                <img id="winFormsSellBuyImgS" />
+            </figure>
+
+        </div>
+
+    </div>
+</div>
+

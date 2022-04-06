@@ -2,114 +2,123 @@
     ViewData["Title"] = "ReSCat";
 }
 
-<div class="container paddingTopR rescatTileStyleR">
-    <div class="introTileR">
-        @*Intro*@
-        <a href=""><img src="https://user-images.githubusercontent.com/95537833/152524739-901694ee-dbdb-491f-89d0-742c1a66bada.png" /></a>
-        <p id="openingNoteR">Before we get started, I'd like to point out that the code for the entire project is on my GitHub account, so if you're interested in the backend (C#) or frontend (XAML), take a look at my GitHub account!</p>
+<div class="@*container*@ paddingTopR  contentBg">
+
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
     </div>
-    <div class="technologiesR">
-        @*technologies used*@
-        <p class="subHeaderProjects">Languages:</p>
-        <figure>
-            <img id="cSharpR" src="~/Content/Img/cSharpLogo.png" />
-        </figure>
-        <figure>
-            <img id="xamlR" src="~/Content/Img/xamlLogo.png" />
-        </figure>
+    <div class="container rescatTileStyleR">
+        <div class="introTileR">
+            @*Intro*@
+            <a href=""><img src="https://user-images.githubusercontent.com/95537833/152524739-901694ee-dbdb-491f-89d0-742c1a66bada.png" /></a>
+            <p id="openingNoteR">Before we get started, I'd like to point out that the code for the entire project is on my GitHub account, so if you're interested in the backend (C#) or frontend (XAML), take a look at my GitHub account!</p>
+        </div>
+        <div class="technologiesR">
+            @*technologies used*@
+            <p class="subHeaderProjects">Languages:</p>
+            <figure>
+                <img id="cSharpR" src="~/Content/Img/cSharpLogo.png" />
+            </figure>
+            <figure>
+                <img id="xamlR" src="~/Content/Img/xamlLogo.png" />
+            </figure>
 
-        <p class="subHeaderProjects">Frameworks:</p>
-        <figure>
-            <img id="wpfR" src="~/Content/Img/wpfLogo.png" />
-        </figure>
-        <figure>
-            <img id="entityFrameworkR" src="~/Content/Img/entityFrameworkLogo.png" />
-        </figure>
-        <div style="clear:both;"></div>
+            <p class="subHeaderProjects">Frameworks:</p>
+            <figure>
+                <img id="wpfR" src="~/Content/Img/wpfLogo.png" />
+            </figure>
+            <figure>
+                <img id="entityFrameworkR" src="~/Content/Img/entityFrameworkLogo.png" />
+            </figure>
+            <div style="clear:both;"></div>
 
-        <p class="subHeaderProjects">Libraries:</p>
-        <p id="closedXmlR">ClosedXML</p>
-        <p id="scottPlott">ScottPlot</p>
+            <p class="subHeaderProjects">Libraries:</p>
+            <p id="closedXmlR">ClosedXML</p>
+            <p id="scottPlott">ScottPlot</p>
 
-        <p class="subHeaderProjects">Tool:</p>
-        <figure>
-            <img id="visualStudioR" src="~/Content/Img/visualStudioCommunityLogo.png" />
-        </figure>
-    </div>
-    <div class="functionalitiesR">
-        @*Functionalities*@
+            <p class="subHeaderProjects">Tool:</p>
+            <figure>
+                <img id="visualStudioR" src="~/Content/Img/visualStudioCommunityLogo.png" />
+            </figure>
+        </div>
+        <div class="functionalitiesR">
+            @*Functionalities*@
+            <div>
+                <p class="headerProjects">About ReSCat</p>
+                <p class="textProjects">
+                    <strong>ReSCat</strong> was created based on my experiences in my previous job. In my previous job I was responsible for creating production plans using Excel, but after a while I found that this was not efficient. Creating a large database with thousands of records on many different sheets was not only slow, but also difficult to read and it was easy to make mistakes. Charts created using Excel required constant refreshing, and a single error in another sheet resulted in multiple errors on charts whoch also took a long time to fix. Using Excel for this type of task also depended on other programs such as a calculator, calendar or notepad, which again led to many imperfections. <br /> I then decided to create a program based on sql database and WPF interface. The program was initially going to be created using WinForms and raw SQL commands, but then I thought that creating another program using the same technology was too much of a waste !, so I decided to choose WPF and the Entity Framework.
+                </p>
+            </div>
+            <div class="gifsR">
+                <p class="headerProjects">Functionalities:</p>
+                <p class="textProjects">The program have many functionalities such as:<br /> Creating new records from ERP data using simple text boxes and adding them to an existing database and linking them with appropriete hall name.</p>
+                <figure>
+                    <img class="gifAdd" />
+                </figure>
+
+                <p class="textProjects">Removal of records that are not needed or have been withdrawn from the ERP system.</p>
+                <figure>
+                    <img class="gifDel" />
+                </figure>
+
+                <p class="textProjects">Update records that have been changed in the ERP system, have been moved to another hall or have simply been added with errors.</p>
+                <figure>
+                    <img class="gifUpd" />
+                </figure>
+
+                <p class="textProjects">Check the production week using the built-in calendar, which automatically updates the data in the corresponding text fields.</p>
+                <figure>
+                    <img class="gifCal" />
+                </figure>
+
+                <p class="textProjects">Function to filter/sort records by finished products/elements only.</p>
+                <figure>
+                    <img class="gifFilter" />
+                </figure>
+
+                <p class="textProjects">Searching records in database.</p>
+                <figure>
+                    <img class="gifSearch" />
+                </figure>
+
+                <p class="textProjects">The data shown on the graphs.</p>
+                <figure>
+                    <img class="gifChart" />
+                </figure>
+
+                <p class="textProjects">Check the log of added/deleted and updated items to avoid losing important records due to mistakes.</p>
+                <figure>
+                    <img class="gifLog" />
+                </figure>
+
+                <p class="textProjects">Saving the database in a formatted Excel file.</p>
+                <figure>
+                    <img src="~/Content/Gif/ReSCatReport.png" />
+                </figure>
+
+                <p class="textProjects">Built-in notepad for making notes and saving files in .txt format.</p>
+                <figure>
+                    <img src="~/Content/Gif/ReSCatNotes.png" />
+                </figure>
+
+                <p class="textProjects">Built-in calculator and ability to switch between system and built-in calculator.</p>
+                <figure>
+                    <img src="~/Content/Gif/ReSCatCalculator.png" />
+                </figure>
+
+                <p class="textProjects">Features such as creating a new database, loading the database from Excel file, editing Excel files (clean editing without interfering with current data), clearing fields and saving log files to a .txt file are also available.</p>
+
+            </div>
+
+        </div>
         <div>
-            <p class="headerProjects">About ReSCat</p>
-            <p class="textProjects">
-                <strong>ReSCat</strong> was created based on my experiences in my previous job. In my previous job I was responsible for creating production plans using Excel, but after a while I found that this was not efficient. Creating a large database with thousands of records on many different sheets was not only slow, but also difficult to read and it was easy to make mistakes. Charts created using Excel required constant refreshing, and a single error in another sheet resulted in multiple errors on charts whoch also took a long time to fix. Using Excel for this type of task also depended on other programs such as a calculator, calendar or notepad, which again led to many imperfections. <br /> I then decided to create a program based on sql database and WPF interface. The program was initially going to be created using WinForms and raw SQL commands, but then I thought that creating another program using the same technology was too much of a waste !, so I decided to choose WPF and the Entity Framework.
-            </p>
+            @*Conclusion*@
+            <p class="headerProjects">Coclusion:</p>
+            <p class="textProjects">The project was created using WPF, ADO.Net for database access, the code was written in C# and XAML. The application was supposed to be created in the MVVM pattern, but due to lack of sufficient knowledge I was not able to realize this point, but even then the files are properly organized. The project code is written in a such way, that it is easy to understand every variable.<br />The application is based on two main frameworks: <br />* WPF, which is responsible for its UI,<br />*  Entity Framework, which is responsible for manipulating the data.<br /><br />And two main libraries:<br />* ScottPlott responsible for creating fully customisable graphs,<br />* ClosedXML which is responsible for creating an XML file with data (it is possible to modify an Excel layout in code-behind).</p>
+            <p class="subHeaderProjects">If you have any questions regarding this project, feel free to contact me !</p>
         </div>
-        <div class="gifsR">
-            <p class="headerProjects">Functionalities:</p>
-            <p class="textProjects">The program have many functionalities such as:<br /> Creating new records from ERP data using simple text boxes and adding them to an existing database and linking them with appropriete hall name.</p>
-            <figure>
-                <img class="gifAdd" />
-            </figure>
-
-            <p class="textProjects">Removal of records that are not needed or have been withdrawn from the ERP system.</p>
-            <figure>
-                <img class="gifDel" />
-            </figure>
-
-            <p class="textProjects">Update records that have been changed in the ERP system, have been moved to another hall or have simply been added with errors.</p>
-            <figure>
-                <img class="gifUpd" />
-            </figure>
-
-            <p class="textProjects">Check the production week using the built-in calendar, which automatically updates the data in the corresponding text fields.</p>
-            <figure>
-                <img class="gifCal" />
-            </figure>
-
-            <p class="textProjects">Function to filter/sort records by finished products/elements only.</p>
-            <figure>
-                <img class="gifFilter" />
-            </figure>
-
-            <p class="textProjects">Searching records in database.</p>
-            <figure>
-                <img class="gifSearch" />
-            </figure>
-
-            <p class="textProjects">The data shown on the graphs.</p>
-            <figure>
-                <img class="gifChart" />
-            </figure>
-
-            <p class="textProjects">Check the log of added/deleted and updated items to avoid losing important records due to mistakes.</p>
-            <figure>
-                <img class="gifLog" />
-            </figure>
-
-            <p class="textProjects">Saving the database in a formatted Excel file.</p>
-            <figure>
-                <img src="~/Content/Gif/ReSCatReport.png" />
-            </figure>
-
-            <p class="textProjects">Built-in notepad for making notes and saving files in .txt format.</p>
-            <figure>
-                <img src="~/Content/Gif/ReSCatNotes.png" />
-            </figure>
-
-            <p class="textProjects">Built-in calculator and ability to switch between system and built-in calculator.</p>
-            <figure>
-                <img src="~/Content/Gif/ReSCatCalculator.png" />
-            </figure>
-
-            <p class="textProjects">Features such as creating a new database, loading the database from Excel file, editing Excel files (clean editing without interfering with current data), clearing fields and saving log files to a .txt file are also available.</p>
-
-        </div>
-
-    </div>
-    <div>
-        @*Conclusion*@
-        <p class="headerProjects">Coclusion:</p>
-        <p class="textProjects">The project was created using WPF, ADO.Net for database access, the code was written in C# and XAML. The application was supposed to be created in the MVVM pattern, but due to lack of sufficient knowledge I was not able to realize this point, but even then the files are properly organized. The project code is written in a such way, that it is easy to understand every variable.<br />The application is based on two main frameworks: <br />* WPF, which is responsible for its UI,<br />*  Entity Framework, which is responsible for manipulating the data.<br /><br />And two main libraries:<br />* ScottPlott responsible for creating fully customisable graphs,<br />* ClosedXML which is responsible for creating an XML file with data (it is possible to modify an Excel layout in code-behind).</p>
-        <p class="subHeaderProjects">If you have any questions regarding this project, feel free to contact me !</p>
     </div>
 </div>

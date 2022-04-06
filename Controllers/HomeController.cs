@@ -36,9 +36,11 @@ namespace KaPKa.Controllers
         {
             return View();
         }
-
-
-        public IActionResult ContactMe()
+        public IActionResult SqlDB()
+        {
+            return View();
+        }
+        public IActionResult ConsoleApps()
         {
             return View();
         }

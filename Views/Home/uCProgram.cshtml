@@ -1,41 +1,50 @@
 ﻿@{
-    ViewData["Title"] = "KapKa";
+    ViewData["Title"] = "uCProgram";
 }
 
 
-
-<div class="container paddingTopU uCProgramTileStyleU">
-    <div class="introTileU">
-        @*Intro*@
-        <p class="headerProjects">About:</p>
-        <p id="openingNoteU">Project was created during my mechatronic studies. The idea was to use mcs51 simulator (that simulates the work of intel 8051) as a medium that will use code created in C to display &#181;C features.</p>
-    </div>
-    <div class="programsU">
-        <p class="subHeaderProjects">Initiation of I2C transmission - reading from the AD converter.</p>
-
-        <p class="textProjects">The idea of first program was meant to inicialize I2C transmision to allow the data from &#181;C simulator be transmited to &#181;C. The program is using ADC to change the values on the screen. Transmission is needed because it is a way to "talk" with the &#181;C.</p>
-        <script src="https://gist.github.com/Mileek/dc6a0f8b87951bfd83af85415184dd79.js"></script>
-        <p class="textProjects"><i>The I2C_Send_Byte function sends 8 bits sequentially starting from the oldest bit, then a value is passed to SCL 0>1>0 to confirm the transfer, then a value of 1 is passed to the SDA variable, then the SCL variable is used again to confirm the transfer. I2C_Receive_byte function works in the opposite way, namely its task is to read the previously sent data, so the value of the SDA variable must be 1 at the beginning. read is confirmed with a timer, then SDA changes its value to 0, because the read has finished - the clock comes again. The last step in this function is the acknowledgement that is, we put 9 bars of the clock (NACK) on the data line, this causes data on the line is stopped. Having created the required functions, we proceed to create the program which sets the ADC into operation mode. For this purpose in the main function the start bit, address 10010000, the control register 00000001 and finally the stop bit. Thus written program displays the value from the potentiometer on the display, and in order to continuously read potentiometer, the reading is set in an infinite loop.</i></p>
-        <figure>
-            <img id="uCADC" />
-        </figure>
-
-        <p class="subHeaderProjects"> &#181;C counter programming.</p>
-        <p class="textProjects">The idea behind this program was to use &#181;C timers and display them on the simulator screen. Timers are important because they are used to count the intervals between events.</p>
-        <script src="https://gist.github.com/Mileek/6a1c9070cdb807f2c1a6679f45e62b24.js"></script>
-        <p class="textProjects"><i>Variables responsible for timer are EA(interrupt activation), ET0(timer interrupt enable), TR0(start counting) and TMOD. In order to create the initialization program for Timer T1 the variables TL0,TH0, TMOD, EA, ET0, TR0 were assigned appropriate values. After the initialization of timer 1, an interrupt loop should be created, this loop is an event that will interrupt the execution of the main program and run a special function to handle the interrupt, after the execution of the interrupt loop will return to the interrupted program and resume its execution from the place where it was interrupted. Each time the counter enters the loop the value of second (sekunda) will change to the opposite value which will cause the counter T1 to start running. In order to display the counter value on the display, timer T0 is initialised in the main function. In the while loop Led4 corresponds with the variable second (sekunda), the variable second2 (sekunda2) is used here to ensure correct countdown, when the variable second (sekunda) is different from second2 (sekunda2) the time will increase by 1, then the time value is shown on the display, or by changing the value of Led4.</i></p>
-        <figure>
-            <img id="uCCnt" />
-        </figure>
-
-        <p class="subHeaderProjects">Real-time clock RTC using &#181;C.</p>
-        <p class="textProjects">The idea behind this program was to use &#181;C to create real time counter. RTC clock is used to counting down time regardless of the state of the machine. It is such an important device that more advanced microcontrollers already have a corresponding unit built in.</p>
-        <script src="https://gist.github.com/Mileek/5bb82643b715d8ca8810e16d05e1296a.js"></script>
-        <p class="textProjects"><i>The program has functions that initialise specific times, namely the init_RTC_s function initialises seconds, init_RTC_m minutes and so on. These functions have the same structure starts with a start bit, then goes into write mode, followed by the location of this write, (0b00000000), this ends with a stop bit. WriteRTC has a syntax similar to the initialisation, also has a start bit, a write, and then there are lines of code with variables that will later take a specific value, this ends with a stop bit. Led_out16 function convert the data from the 16 system, it was also split into 2 values so that the display could visualise 2 variables at once. Conversion function was created, to set the initial value. In the main function you can specify the values of seconds, minutes, hours and days that will be displayed in the simulation (initial values). SaveRTC assigns the values previously selected to the SaveRTC function with 4 parameters for later display. The while loop has button conditions to change between the values displayed on the display, it also has an initialisation function (created earlier), a start bit, a device address and a function that receives the value previously created and displays it on the LCD. By pressing P1.4 or P1.5 it is possible to move between the displayed times/date.</i></p>
-        <figure>
-            <img id="uCRTCSM" src="~/Content/Img/ucRTCSM.png" />
-        </figure>
+<div class="contentBg">
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
     </div>
 
+    <div class="container paddingTopU uCProgramTileStyleU">
+        <div class="introTileU">
+            @*Intro*@
+            <p class="sideNoteUS"><i>*Program variables are in Polish*</i></p>
+            <p class="headerProjects">About:</p>
+            <p id="openingNoteU">Project was created during my mechatronic studies. The idea was to use mcs51 simulator (that simulates the work of intel 8051) as a medium that will use code created in C to display &#181;C features.</p>
+        </div>
+        <div class="programsU">
+            <p class="subHeaderProjects">Initiation of I2C transmission - reading from the AD converter.</p>
+
+            <p class="textProjects">The idea of first program was meant to inicialize I2C transmision to allow the data from &#181;C simulator be transmited to &#181;C. The program is using ADC to change the values on the screen. Transmission is needed because it is a way to "talk" with the &#181;C.</p>
+            <script src="https://gist.github.com/Mileek/dc6a0f8b87951bfd83af85415184dd79.js"></script>
+            <p class="textProjects"><i>The I2C_Send_Byte function sends 8 bits sequentially starting from the oldest bit, then a value is passed to SCL 0>1>0 to confirm the transfer, then a value of 1 is passed to the SDA variable, then the SCL variable is used again to confirm the transfer. I2C_Receive_byte function works in the opposite way, namely its task is to read the previously sent data, so the value of the SDA variable must be 1 at the beginning. read is confirmed with a timer, then SDA changes its value to 0, because the read has finished - the clock comes again. The last step in this function is the acknowledgement that is, we put 9 bars of the clock (NACK) on the data line, this causes data on the line is stopped. Having created the required functions, we proceed to create the program which sets the ADC into operation mode. For this purpose in the main function the start bit, address 10010000, the control register 00000001 and finally the stop bit. Thus written program displays the value from the potentiometer on the display, and in order to continuously read potentiometer, the reading is set in an infinite loop.</i></p>
+            <figure>
+                <img id="uCADC" />
+            </figure>
+
+            <p class="subHeaderProjects"> &#181;C counter programming.</p>
+            <p class="textProjects">The idea behind this program was to use &#181;C timers and display them on the simulator screen. Timers are important because they are used to count the intervals between events.</p>
+            <script src="https://gist.github.com/Mileek/6a1c9070cdb807f2c1a6679f45e62b24.js"></script>
+            <p class="textProjects"><i>Variables responsible for timer are EA(interrupt activation), ET0(timer interrupt enable), TR0(start counting) and TMOD. In order to create the initialization program for Timer T1 the variables TL0,TH0, TMOD, EA, ET0, TR0 were assigned appropriate values. After the initialization of timer 1, an interrupt loop should be created, this loop is an event that will interrupt the execution of the main program and run a special function to handle the interrupt, after the execution of the interrupt loop will return to the interrupted program and resume its execution from the place where it was interrupted. Each time the counter enters the loop the value of second (sekunda) will change to the opposite value which will cause the counter T1 to start running. In order to display the counter value on the display, timer T0 is initialised in the main function. In the while loop Led4 corresponds with the variable second (sekunda), the variable second2 (sekunda2) is used here to ensure correct countdown, when the variable second (sekunda) is different from second2 (sekunda2) the time will increase by 1, then the time value is shown on the display, or by changing the value of Led4.</i></p>
+            <figure>
+                <img id="uCCnt" />
+            </figure>
+
+            <p class="subHeaderProjects">Real-time clock RTC using &#181;C.</p>
+            <p class="textProjects">The idea behind this program was to use &#181;C to create real time counter. RTC clock is used to counting down time regardless of the state of the machine. It is such an important device that more advanced microcontrollers already have a corresponding unit built in.</p>
+            <script src="https://gist.github.com/Mileek/5bb82643b715d8ca8810e16d05e1296a.js"></script>
+            <p class="textProjects"><i>The program has functions that initialise specific times, namely the init_RTC_s function initialises seconds, init_RTC_m minutes and so on. These functions have the same structure starts with a start bit, then goes into write mode, followed by the location of this write, (0b00000000), this ends with a stop bit. WriteRTC has a syntax similar to the initialisation, also has a start bit, a write, and then there are lines of code with variables that will later take a specific value, this ends with a stop bit. Led_out16 function convert the data from the 16 system, it was also split into 2 values so that the display could visualise 2 variables at once. Conversion function was created, to set the initial value. In the main function you can specify the values of seconds, minutes, hours and days that will be displayed in the simulation (initial values). SaveRTC assigns the values previously selected to the SaveRTC function with 4 parameters for later display. The while loop has button conditions to change between the values displayed on the display, it also has an initialisation function (created earlier), a start bit, a device address and a function that receives the value previously created and displays it on the LCD. By pressing P1.4 or P1.5 it is possible to move between the displayed times/date.</i></p>
+            <figure>
+                <img id="uCRTCSM" src="~/Content/Img/ucRTCSM.png" />
+            </figure>
+        </div>
+
+    </div>
 </div>
 

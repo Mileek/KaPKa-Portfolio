@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Console Logic Apps";
+}
+
+
+<div class="contentBg">
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="container paddingTopC sqlDbTileStyleC">
+        <div class="introTileC">
+            @*Intro*@
+            <p class="sideNoteC"><i>*Program variables are in Polish*</i></p>
+            <p class="headerProjects">About:</p>
+            <p id="openingNoteS">Firstly, I know console apps are always looked down upon, but let's take a look back - without console apps who would become a programmer? The apps below are just a selected portion of apps that show my solutions to problems - they show my logic when writing programs. Some of these apps are easy, but the most important thing is the idea behind them and my approach to its problem solving.</p>
+        </div>
+        <div class="programsC">
+            <p class="subHeaderProjects">Coordinates of a point after it has been moved by a given vector.</p>
+            <p class="textProjects">The application was meant to take 2 vectors from users and simply add them together, but there is a catch - the ref keyword. The code example below shows the usage of the ref keyword. This keyword should be used in methods so that the variable passed to the method and the variable inside the method are the same (void method).</p>
+            <script src="https://gist.github.com/Mileek/9a39959e5a37b90992b7044a018c20bf.js"></script>
+
+            <p class="subHeaderProjects">Contamination of words based on the input multiplier.</p>
+            <p class="textProjects">The application was meant to take input string values from the user add them to the table and next multiply them by the amount written by the user. So for example after entering Practice makes perfect and choosing multiplier 2 the autput will be PracticePractice makesmakes perfectperfect.</p>
+            <script src="https://gist.github.com/Mileek/eea986f66953435b631b5f3ca8c46d9b.js"></script>
+
+            <p class="subHeaderProjects">Fibonacci sequence</p>
+            <p class="textProjects">In the Fibonacci sequence, each number is the sum of the previous two. Fibonacci numbers appear in mathematics unexpectedly often, so much so that there is an entire journal dedicated to their study. For this reason, it is a commonly used programming example. The program was solved in two ways - recursively and using functions.</p>
+            <script src="https://gist.github.com/Mileek/b1864f7747f7597e789448376180ffce.js"></script>
+
+            <p class="subHeaderProjects">Prime Nubers</p>
+            <p class="textProjects">This is another solution to a popular programming exercise. We put random numbers into an array of 100 elements, and the program finds how many of them are prime numbers.</p>
+            <script src="https://gist.github.com/Mileek/1043c5f6153cf2cd2b69f1e37742a9d0.js"></script>
+
+            <p class="subHeaderProjects">The frequency of occurrence of a character in a given string.</p>
+            <p class="textProjects">It took me a while to complete this program. Its task is to take a string as an input and count the number of repeated characters. An example in the given string: Example there are 2e, 1x, 1a, 1m, 1p, 1l.</p>
+            <script src="https://gist.github.com/Mileek/ba16f216507b0852a55ccbee506a2f93.js"></script>
+
+            <p class="subHeaderProjects">Gaderypoluki code</p>
+            <p class="textProjects">This is one of the most interesting programs I have created using the console. The program is used to encrypt an input string using "gaderypoluki" rules, the idea of the cipher was to replace one character with another. Example G->A, A->G, D->E etc.</p>
+            <script src="https://gist.github.com/Mileek/ca11794ddb4523a80faf61bc10070311.js"></script>
+
+            <p class="subHeaderProjects">Using Structs</p>
+            <p class="textProjects">Program is a presentation of using struct's in C#. The idea of program was to send values from main to struct and calculate it inside. Values from struct were displayed using main function.</p>
+            <script src="https://gist.github.com/Mileek/77b1f036f8675558b6cfcc3e530d619f.js"></script>
+
+            <p class="subHeaderProjects">And thats it!</p>
+            <p class="textProjects">I thought for a very long time whether it was worth posting my console apps on this site, but after some consideration I decided to only post the ones that took me some time to make or that I remembered because of something. Console apps are a great way to show the logic behind my thinking when solving problems.</p>
+        </div>
+    </div>
+</div>
+

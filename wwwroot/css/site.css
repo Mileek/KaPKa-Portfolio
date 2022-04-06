@@ -15,7 +15,7 @@ body, html { /*
     /*padding-top: 40px;*/
     /* margin-bottom: -60px;*/
     /*overflow-x: hidden;*/
-    z-index: -1 !important;/*hides bg deeper so that content is always on 1st plan*/
+    z-index: -1 !important; /*hides bg deeper so that content is always on 1st plan*/
 }
 
 
@@ -342,7 +342,6 @@ a.socialLink {
 /**/
 /*Home Page*/
 /**/
-
 .indexBackground {
     background: linear-gradient(180deg, #228fb3, #2263b3, #224bb3, #2238b3, #2224b3);
     animation: gradient 8s ease-in-out infinite;
@@ -955,6 +954,11 @@ a.socialLink {
     height: 100%;
     position: relative;
     overflow: hidden;
+    background-color: #111114;
+    background-image: radial-gradient(#e3e3e3, rgba(255, 218, 191,.2) 2px, transparent 40px), radial-gradient(#e3e3e3, rgba(252, 255, 191,.15) 1px, transparent 30px), radial-gradient(#e3e3e3, rgba(193, 191, 255,.1) 2px, transparent 50px), radial-gradient(rgba(191, 255, 214,.4), rgba(255, 191, 234,.1) 2px, transparent 15px);
+    background-size: 550px 550px, 350px 350px, 240px 250px, 150px 150px;
+    background-position: 0, 0, 40px 60px, 130px 270px, 80px 110px;
+    z-index: 0;
 }
 
 .lines {
@@ -965,7 +969,7 @@ a.socialLink {
     height: 100%;
     margin: auto;
     width: 90vw;
-    z-index:-1;
+    z-index: -1;
 }
 
 .line {
@@ -987,7 +991,7 @@ a.socialLink {
         width: 100%;
         top: -50%;
         left: 0;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 95%, #fcffbf 99.9%);
         -webkit-animation: drop 12s 0s infinite;
         animation: drop 12s 0s infinite;
         -webkit-animation-fill-mode: forwards;
@@ -1023,8 +1027,8 @@ a.socialLink {
     }
 
         .line:nth-child(4)::after {
-            -webkit-animation-delay: 1.7s;
-            animation-delay: 1.7s;
+            -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s;
         }
 
 
@@ -1121,6 +1125,31 @@ a.socialLink {
 .textRightA {
     padding: 100px 0;
 }
+/*table*/
+.skillsTableA{
+    margin-bottom:2vw;
+}
+.skillsTableA td, .skillsTableA th {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+.skillsTableA th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #25b862;
+    color: black;
+    font-weight: 700;
+}
+
+.skillsTableA tr:nth-child(even) {
+    background-color: #2e313c;
+}
+.skillsTableA tr:hover {
+    border: 1.05px solid #33d0cf;
+}
+
 /*Text styling MeMyselfI*/
 #kamilTopA {
     display: block;
@@ -1286,7 +1315,7 @@ a.socialLink {
 }
 
 #meA {
-    z-index:10;
+    z-index: 10;
     color: #ffeded;
     animation: fill-red 2s infinite;
     -webkit-animation: fill-red 2s infinite;
@@ -1347,12 +1376,12 @@ a.socialLink {
     font-size: 24px;
     font-weight: 600;
     text-align: center;
-} 
+}
 
-    .aboutMeNoteA span {
-        text-decoration: line-through;
-        text-decoration-thickness: .1px;
-    }
+.aboutMeNoteA span {
+    text-decoration: line-through;
+    text-decoration-thickness: .1px;
+}
 
 
 .aboutMeNoteA a:link,
@@ -1389,14 +1418,13 @@ a.socialLink {
 
 #graduateOutA {
     margin-top: 350px;
-    margin-bottom: 20px;
+    margin-bottom:20px;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
     width: 50vw;
     height: auto;
     overflow: hidden;
-
     content: url("../Content/Img/kamilGraduate.jpg");
 }
 
@@ -1595,12 +1623,12 @@ a.socialLink {
 
 
 .paddingTopR {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
     letter-spacing: 1px;
 }
 
 .rescatTileStyleR {
+    padding-top: 5vw;
     text-align: justify;
     background-color: #1d202b;
 }
@@ -1680,8 +1708,8 @@ a.socialLink {
 }
 
 .subHeaderProjects {
-    margin-top: 5%;
-    margin-bottom: 3%;
+    margin-top: 2vw;
+    padding-bottom: 2vw;
     font-size: 38px;
     font-weight: 600;
 }
@@ -1851,6 +1879,10 @@ a.socialLink {
 /**/
 /*uC Program*/
 /**/
+.sideNoteUS {
+    font-size: 12px;
+}
+
 .uCProgramTileStyleU {
     text-align: justify;
     background-color: #1d202b;
@@ -1860,6 +1892,10 @@ a.socialLink {
     padding-top: 50px;
     padding-bottom: 50px;
     letter-spacing: 1px;
+}
+
+#openingNoteU {
+    padding-bottom: 5vw;
 }
 
 .programsU figure img {
@@ -1884,21 +1920,24 @@ a.socialLink {
 #uCADC {
     content: url("../Content/Img/uCADC.png");
     height: 25vw;
-    width: auto;
+    width: 45vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #uCCnt {
     content: url("../Content/Img/uCTime1.png");
     height: 25vw;
-    width: auto;
+    width: 45vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    animation: uCblurOut 0.6s ease-in-out;
+    animation: blurOut 0.6s ease-in-out;
 }
 
     #uCCnt:hover {
-        animation: uCblurIn 0.6s ease-in-out;
+        animation: blurIn 0.6s ease-in-out;
         content: url("../Content/Img/uCTime2.png");
     }
 
@@ -1909,7 +1948,7 @@ a.socialLink {
     margin-left: auto;
     margin-right: auto;
     height: 25vw;
-    width: auto;
+    width: 45vw;
 }
 
 @-webkit-keyframes RTCPhoto {
@@ -1926,30 +1965,101 @@ a.socialLink {
     }
 }
 
-@-webkit-keyframes uCblurIn {
+@-webkit-keyframes blurIn {
     0% {
-        filter: blur(8px);
+        filter: blur(6px);
     }
 }
 
-@-webkit-keyframes uCblurOut {
+@-webkit-keyframes blurOut {
     0% {
-        filter: blur(8px);
+        filter: blur(6px);
     }
 }
 
 
+/**/
+/*SqlDB*/
+/**/
+.sqlDbTileStyleS {
+    text-align: justify;
+    background-color: #1d202b;
+}
+
+.paddingTopS {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.programsS figure img {
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
 
 
+#openingNoteS {
+    padding-bottom: 5vw;
+}
 
 
+#dataBaseImgS {
+    content: url("../Content/Img/emptyDb.png");
+    height: 25vw;
+    width: 50vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: blurOut 0.6s ease-in-out;
+}
+
+    #dataBaseImgS:hover {
+        animation: blurIn 0.6s ease-in-out;
+        content: url("../Content/Img/functionsDb.png");
+    }
+
+#winFormsSellBuyImgS {
+    content: url("../Content/Img/winFormsSell.png");
+    height: 25vw;
+    width: 50vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: blurOut 0.6s ease-in-out;
+}
+
+    #winFormsSellBuyImgS:hover {
+        animation: blurIn 0.6s ease-in-out;
+        content: url("../Content/Img/winFormsBuy.png");
+    }
 
 
+/**/
+/*Console Apps*/
+/**/
+.sqlDbTileStyleC {
+    text-align: justify;
+    background-color: #1d202b;
+}
+
+.paddingTopC {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.programsC figure img {
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
 
 
+#openingNoteC {
+    padding-bottom: 5vw;
+}
 
 /*Contact Me - future*/
-.TopBottomC{
-    margin-top:50px;
-    margin-bottom:2000px;
+.TopBottomC {
+    margin-top: 50px;
+    margin-bottom: 2000px;
 }
