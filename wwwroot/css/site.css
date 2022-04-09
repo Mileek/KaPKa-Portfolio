@@ -1031,6 +1031,24 @@ a.socialLink {
             animation-delay: 1.6s;
         }
 
+    .line:nth-child(5) {
+        margin-left: 30%;
+    }
+
+        .line:nth-child(5)::after {
+            -webkit-animation-delay: 1.2s;
+            animation-delay: 1.6s;
+        }
+
+    .line:nth-child(6) {
+        margin-left: -30%;
+    }
+
+        .line:nth-child(6)::after {
+            -webkit-animation-delay: 1.4s;
+            animation-delay: 1.6s;
+        }
+
 
 @-webkit-keyframes drop {
     0% {
@@ -1126,29 +1144,32 @@ a.socialLink {
     padding: 100px 0;
 }
 /*table*/
-.skillsTableA{
-    margin-bottom:2vw;
-}
-.skillsTableA td, .skillsTableA th {
-    border: 1px solid #cccccc;
-    padding: 8px;
-}
-.skillsTableA th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-size: 20px;
-    text-align: center;
-    background-color: #25b862;
-    color: black;
-    font-weight: 700;
+.skillsTableA {
+    margin-bottom: 2vw;
 }
 
-.skillsTableA tr:nth-child(even) {
-    background-color: #2e313c;
-}
-.skillsTableA tr:hover {
-    border: 1.05px solid #33d0cf;
-}
+    .skillsTableA td, .skillsTableA th {
+        border: 1px solid #cccccc;
+        padding: 8px;
+    }
+
+    .skillsTableA th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 20px;
+        text-align: center;
+        background-color: #25b862;
+        color: black;
+        font-weight: 700;
+    }
+
+    .skillsTableA tr:nth-child(even) {
+        background-color: #2e313c;
+    }
+
+    .skillsTableA tr:hover {
+        border: 1.05px solid #33d0cf;
+    }
 
 /*Text styling MeMyselfI*/
 #kamilTopA {
@@ -1418,7 +1439,7 @@ a.socialLink {
 
 #graduateOutA {
     margin-top: 350px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
@@ -2058,8 +2079,181 @@ a.socialLink {
     padding-bottom: 5vw;
 }
 
-/*Contact Me - future*/
-.TopBottomC {
+/*Contact Me*/
+.topBottomC {
     margin-top: 50px;
-    margin-bottom: 2000px;
+    height: 115vh;
+}
+
+.contactTile {
+    position:relative;
+    padding: 10px;
+    margin-top: 80px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #33d0cf;
+    -webkit-box-shadow: 0px 0px 40px -15px rgba(51, 208, 207, 1);
+    -moz-box-shadow: 0px 0px 40px -15px rgba(51, 208, 207, 1);
+    box-shadow: 0px 0px 40px -15px rgba(51, 208, 207, 1);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    background-image: url(/Content/Img/contactBg.jpg);
+    background-position: top;
+}
+
+    .contactTile > h1 {
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .contactTile > hr {
+        height: 2px;
+        color: white;
+        margin-top: 20px;
+    }
+
+.form-group > label {
+    color: #cccccc;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.nameInput, .emailInput, .topicInput {
+    background-color: #232c38;
+    color: white;
+    border: none;
+}
+
+    .nameInput:focus, .emailInput:focus, .topicInput:focus {
+        background-color: #232c38;
+        color: white;
+        border: 1px solid #33d0cf;
+        -webkit-box-shadow: 0px 0px 40px -22px rgba(51, 208, 207, 1);
+        -moz-box-shadow: 0px 0px 40px -22px rgba(51, 208, 207, 1);
+        box-shadow: 0px 0px 40px -22px rgba(51, 208, 207, 1);
+    }
+
+
+.messageInput {
+    height: 200px;
+    color: white;
+    background-color: #232c38;
+    border: none;
+}
+
+    .messageInput:focus {
+        height: 200px;
+        color: white;
+        background-color: #232c38;
+        border: 1px solid #33d0cf;
+        -webkit-box-shadow: 0px 0px 40px -22px rgba(51, 208, 207, 1);
+        -moz-box-shadow: 0px 0px 40px -22px rgba(51, 208, 207, 1);
+        box-shadow: 0px 0px 40px -22px rgba(51, 208, 207, 1);
+    }
+
+.buttonContainer {
+    text-align: center;
+}
+
+.buttonSubmit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    width: 20%;
+    min-width:100px;
+    background: #232c38;
+    color: white;
+    border: 3px dotted #33d0cf;
+}
+
+    .buttonSubmit:hover {
+        color: white;
+        border: 3px solid #33d0cf;
+        animation: fill-navbar 1.6s infinite;
+        -webkit-animation: fill-navbar 1.6s infinite;
+        -moz-animation: fill-navbar 1.6s infinite;
+    }
+
+.arrowsName {
+    /*position: relative;*/
+}
+
+    .arrowsName img {
+        position: absolute;
+        transform: translateX(-125%) translateY(-125%);
+        height: 50px;
+        width: 100px;
+    }
+
+    .arrowsName p {
+        position: absolute;
+        transform: translateX(-130%) translateY(-175%);
+        color: #13ed13;
+        border: 1px dashed #13ed13;
+        border-radius: 10px;
+        font-size: 14px;
+        word-spacing: 1px;
+        width: 150px;
+        padding: 5px;
+    }
+
+.arrowsEmail {
+    display:flex;
+}
+
+    .arrowsEmail img {
+        position: absolute;
+        transform: rotateY(180deg) rotateX(180deg);
+        left:102%;
+        bottom:58%;
+        height: 50px;
+        width: 100px;
+    }
+
+    .arrowsEmail p {
+        position: absolute;
+        left: 110%;
+        bottom: 40%;
+        color: #13ed13;
+        border: 1px dashed #13ed13;
+        border-radius: 10px;
+        font-size: 14px;
+        word-spacing: 1px;
+        width: 150px;
+        padding: 5px;
+    }
+
+.arrowsEmail {
+    /*position: relative;*/
+}
+
+.arrowsTopic img {
+    position: absolute;
+    transform: translateX(-125%) translateY(-50%) rotateX(180deg);
+    height: 50px;
+    width: 100px;
+}
+
+.arrowsTopic p {
+    position: absolute;
+    transform: translateX(-150%) translateY(50%);
+    color: #13ed13;
+    border: 1px dashed #13ed13;
+    border-radius: 10px;
+    font-size: 14px;
+    word-spacing: 1px;
+    width: 150px;
+    padding: 5px;
+}
+.form-group>span {
+    color: red;
+    background-color: transparent;
+    font-size: 14px;
+    letter-spacing: 1px;
+    /*border: 1px solid red;*/
+    font-style:italic;
 }

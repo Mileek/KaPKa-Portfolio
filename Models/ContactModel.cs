@@ -2,17 +2,28 @@
 using MailKit.Security;
 using MimeKit;
 using MimeKit.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace KaPKa.Models
 {
     public class ContactModel
     {
+        [Required]
+        [MinLength(3, ErrorMessage = "Name needs to be longer than 3 characters.")]
+        [Display(Name = "Name")]
         public string? fromName { get; set; }
+        [Required]
+        [EmailAddress]
+        [MinLength(6, ErrorMessage = "Email needs to be longer than 6 characters.")]
+        [Display(Name = "Email")]
         public string? fromEmail { get; set; }
-        public string? Subject { get; set; }
+        public string? Topic { get; set; }
+        [Required]
+        [MinLength(6, ErrorMessage = "Message needs to be longer than 10 characters.")]
+        [Display(Name = "Message")]
         public string? Message { get; set; }
 
-        public void Send(string fromName, string fromEmail, string mailSubject, string message)
+        public void Send(string fromName, string fromEmail, string mailTopic, string message)
         {
             // create message object
             var messageData = new MimeMessage();
@@ -21,7 +32,7 @@ namespace KaPKa.Models
             //To whom send the mail
             messageData.To.Add(MailboxAddress.Parse("system@kamil-p-kaszuba.pl"));
             //Messge subject
-            messageData.Subject = mailSubject;
+            messageData.Subject = mailTopic;
             //Message body
             messageData.Body = new TextPart(TextFormat.Plain) { Text = message };
 

@@ -14,7 +14,12 @@ namespace KaPKa.Controllers
         [HttpPost]
         public IActionResult Contact(ContactModel contact)
         {
-            contact.Send(contact.fromName, contact.fromEmail, contact.Subject, contact.Message);
+            if (contact.Topic == null)
+            {
+                contact.Topic = "";
+            }
+            contact.Send(contact.fromName, contact.fromEmail, contact.Topic, contact.Message);
+            ModelState.Clear();
             return View();
         }
     }

@@ -3,49 +3,76 @@
 @{
     ViewData["Title"] = "Contact";
 }
-<div class="TopBottomC">
-    <h1>Contact</h1>
-
-    <h4>Contact is currently under construction !</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Contact">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="fromName" class="control-label"></label>
-                    <input asp-for="fromName" class="form-control" />
-                    <span asp-validation-for="fromName" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="fromEmail" class="control-label"></label>
-                    <input asp-for="fromEmail" class="form-control" />
-                    <span asp-validation-for="fromEmail" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Subject" class="control-label"></label>
-                    <input asp-for="Subject" class="form-control" />
-                    <span asp-validation-for="Subject" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Message" class="control-label"></label>
-                    <textarea asp-for="Message" class="form-control"></textarea>
-                    <span asp-validation-for="Message" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
-            </form>
-        </div>
+<div class="contentBg">
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
     </div>
+    <div class="container-fluid">
+        <div id=arrows>
+                <p id="socialText">Chceck out my social media!</p>
+                <img id="topBottom" src="~/Content/img/arrowRight.png" />
+                <img id="topLeftRight" src="~/Content/img/arrowRoundRight.png" />
+                <img id="bottomLeftRight" src="~/Content/img/arrowRoundRight.png" />
+                <img id="bottomTop" src="~/Content/img/arrowRight.png" />
+            </div>
+        <div class="topBottomC">
 
-    <div>
-        <a asp-action="Index">Back to List</a>
+            <div class="row contactTile2">
+                <div class="col-md-4 contactTile">
+                    <h1>Contact Me</h1>
+                    <hr />
+
+                    <form asp-action="Contact">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group nameTile">
+                            <label asp-for="fromName" class="control-label nameLabel">Your Name:</label>
+                            <input asp-for="fromName" type="text" class="form-control nameInput" />
+                            <div class="arrowsName">
+                                <img src="~/Content/Img/arrowRoundSideNoteA.png" />
+                                <p>Enter your name so I know with whom I have the pleasure.</p>
+                            </div>
+                            <span asp-validation-for="fromName" class=" nameValid"></span>
+                        </div>
+                        <div class="form-group emailTile">
+                            <label asp-for="fromEmail" class="control-label emailLabel">Your Email:</label>
+                            <input asp-for="fromEmail" type="email" class="form-control emailInput" />
+                            <div class="arrowsEmail">
+                                <img src="~/Content/Img/arrowRoundSideNoteA.png" />
+                                <p>Without an email address, I won't know who to reply to.</p>
+                            </div>
+                            <span asp-validation-for="fromEmail" class=" emailValid"></span>
+                        </div>
+                        <div class="form-group topicTile">
+                            <label asp-for="Topic" class="control-label topicLabel">Topic:</label>
+                            <input asp-for="Topic" type="text" class="form-control topicInput" />
+                            <div class="arrowsTopic">
+                                <img src="~/Content/Img/arrowRoundSideNoteA.png" />
+                                <p>Enter an email topic or leave this field blank.</p>
+                            </div>
+                            <span asp-validation-for="Topic" class=" topicValid"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Message" class="control-label messageLabel">Message:</label>
+                            <textarea asp-for="Message" minlength="10" class="form-control messageInput"></textarea>
+                            <span asp-validation-for="Message" class=" messageValid"></span>
+                        </div>
+                        <div class="form-group buttonContainer">
+                            <input type="submit" value="Send" class="btn buttonSubmit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 @section Scripts {
     @{
     await Html.RenderPartialAsync("_ValidationScriptsPartial");
-}
-}
+    }
+    }
