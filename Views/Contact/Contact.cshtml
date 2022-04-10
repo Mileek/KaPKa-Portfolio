@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Contact";
 }
+
+
 <div class="contentBg">
     <div class="lines">
         <div class="line"></div>
@@ -14,12 +16,12 @@
     </div>
     <div class="container-fluid">
         <div id=arrows>
-                <p id="socialText">Chceck out my social media!</p>
-                <img id="topBottom" src="~/Content/img/arrowRight.png" />
-                <img id="topLeftRight" src="~/Content/img/arrowRoundRight.png" />
-                <img id="bottomLeftRight" src="~/Content/img/arrowRoundRight.png" />
-                <img id="bottomTop" src="~/Content/img/arrowRight.png" />
-            </div>
+            <p id="socialText">Chceck out my social media!</p>
+            <img id="topBottom" src="~/Content/img/arrowRight.png" />
+            <img id="topLeftRight" src="~/Content/img/arrowRoundRight.png" />
+            <img id="bottomLeftRight" src="~/Content/img/arrowRoundRight.png" />
+            <img id="bottomTop" src="~/Content/img/arrowRight.png" />
+        </div>
         <div class="topBottomC">
 
             <div class="row contactTile2">
@@ -62,10 +64,18 @@
                             <span asp-validation-for="Message" class=" messageValid"></span>
                         </div>
                         <div class="form-group buttonContainer">
-                            <input type="submit" value="Send" class="btn buttonSubmit" />
+                            <input onClick="button_Click" type="submit" value="Send" class="btn buttonSubmit" />
                         </div>
                     </form>
                 </div>
+                @{
+                    if (ViewBag.SuccessMessage != null)
+                    {
+                        <div class="messageSent">
+                            @ViewBag.SuccessMessage
+                        </div>
+                    }
+                }
             </div>
         </div>
     </div>

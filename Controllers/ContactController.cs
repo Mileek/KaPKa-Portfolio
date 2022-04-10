@@ -16,11 +16,17 @@ namespace KaPKa.Controllers
         {
             if (contact.Topic == null)
             {
-                contact.Topic = "";
+                contact.Topic = ""; //Topic might be blank
             }
             contact.Send(contact.fromName, contact.fromEmail, contact.Topic, contact.Message);
+            
             ModelState.Clear();
             return View();
+        }
+
+        public void button_Click(object sender, EventArgs e)
+        {
+            ViewBag.SuccessMessage = "Success";
         }
     }
 }

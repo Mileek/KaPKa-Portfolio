@@ -1187,7 +1187,7 @@ a.socialLink {
 .aboutHeaderA {
     margin-bottom: 50px;
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
@@ -1200,6 +1200,7 @@ a.socialLink {
     letter-spacing: 1px;
     margin-left: auto;
     margin-right: auto;
+    font-size:17px;
 }
 
     .textA a:link,
@@ -1219,6 +1220,8 @@ a.socialLink {
 .dateA {
     letter-spacing: 1px;
     margin-top: 75px;
+    font-style: italic;
+    font-size: 14px;
 }
 
 .conclusionA .textA span {
@@ -1373,6 +1376,7 @@ a.socialLink {
 #introductionA {
     margin-top: 100px;
     margin-bottom: 25px;
+    font-size:18px;
 }
 
 #myStudiesA {
@@ -1392,11 +1396,12 @@ a.socialLink {
 }
 
 #pointResumeA {
-    margin-top: 50px;
+    margin-top: 110px;
     text-align: center;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 26px;
+    font-weight: 700;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 .aboutMeNoteA span {
@@ -1649,7 +1654,7 @@ a.socialLink {
 }
 
 .rescatTileStyleR {
-    padding-top: 5vw;
+    padding-top: 25px;
     text-align: justify;
     background-color: #1d202b;
 }
@@ -1818,7 +1823,7 @@ a.socialLink {
     letter-spacing: 1px;
 }
 
-.rescatTileStyleK {
+.kapkaTileStyleK {
     text-align: justify;
     background-color: #1d202b;
 }
@@ -2086,7 +2091,7 @@ a.socialLink {
 }
 
 .contactTile {
-    position:relative;
+    position: relative;
     padding: 10px;
     margin-top: 80px;
     align-self: center;
@@ -2164,7 +2169,7 @@ a.socialLink {
     margin-bottom: 10px;
     font-size: 18px;
     width: 20%;
-    min-width:100px;
+    min-width: 100px;
     background: #232c38;
     color: white;
     border: 3px dotted #33d0cf;
@@ -2202,14 +2207,14 @@ a.socialLink {
     }
 
 .arrowsEmail {
-    display:flex;
+    display: flex;
 }
 
     .arrowsEmail img {
         position: absolute;
         transform: rotateY(180deg) rotateX(180deg);
-        left:102%;
-        bottom:58%;
+        left: 102%;
+        bottom: 58%;
         height: 50px;
         width: 100px;
     }
@@ -2249,11 +2254,34 @@ a.socialLink {
     width: 150px;
     padding: 5px;
 }
-.form-group>span {
+
+.form-group > span {
     color: red;
     background-color: transparent;
     font-size: 14px;
     letter-spacing: 1px;
-    /*border: 1px solid red;*/
-    font-style:italic;
+    font-style: italic;
+}
+
+.messageSent {
+    position: absolute;
+    left: 25%;
+    top: 40%;
+    offset-path: path('M 0 0 C 540 295 1010 -230 1840 -5');
+    animation: moveAnimaton 5s forwards;
+    width: 15vw;
+    height: 15vh;
+    background: cyan;
+    opacity: 0;
+}
+
+@keyframes moveAnimaton {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        offset-distance: 100%;
+        opacity: 0;
+    }
 }
