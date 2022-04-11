@@ -11,7 +11,9 @@ namespace KaPKa.Controllers
             return View();
         }
 
+        
         [HttpPost]
+        [Route("Contact")]
         public IActionResult Contact(ContactModel contact)
         {
             if (contact.Topic == null)

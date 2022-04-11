@@ -13,33 +13,44 @@ namespace KaPKa.Controllers
             _logger = logger;
         }
 
+        [Route("")]
+        [Route("Home")]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Route("MeMyselfI")]
         public IActionResult MeMyselfI()
         {
             return View();
         }
 
+        [Route("ReSCat")]
         public IActionResult ReSCat()
         {
             return View();
         }
 
+        [Route("KapKa")]
         public IActionResult KapKa()
         {
             return View();
         }
+
+        [Route("uCProgram")]
         public IActionResult uCProgram()
         {
             return View();
         }
+
+        [Route("SqlDB")]
         public IActionResult SqlDB()
         {
             return View();
         }
+
+        [Route("ConsoleApps")]
         public IActionResult ConsoleApps()
         {
             return View();
@@ -47,7 +58,7 @@ namespace KaPKa.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return View(); //It is currently not used, but maybe in the future ?
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
