@@ -1,0 +1,30 @@
+﻿
+<div class="contentBg">
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="container-fluid">
+
+        <div class="topBottomC">
+            <div class="contactMessageTile">
+                <h1>Your message has been sent. <br /> </h1>
+                <hr />
+                <h5>Thank you for contacting me, I will try to reply as soon as possible.</h5>
+                <h6>Best regards,<br /> Kamil Kaszuba</h6>
+                <a asp-area="" asp-controller="Contact" asp-action="Contact"><span id="returnContact">Return to Contact Page.</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

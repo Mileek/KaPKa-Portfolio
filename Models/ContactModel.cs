@@ -23,6 +23,8 @@ namespace KaPKa.Models
         [Display(Name = "Message")]
         public string? Message { get; set; }
 
+        public string? buttonName { get; set; }
+
         public void Send(string fromName, string fromEmail, string mailTopic, string message)
         {
             // create message object

@@ -64,18 +64,10 @@
                             <span asp-validation-for="Message" class=" messageValid"></span>
                         </div>
                         <div class="form-group buttonContainer">
-                            <input onClick="button_Click" type="submit" value="Send" class="btn buttonSubmit" />
+                            <input type="submit" value="Send" class="btn buttonSubmit" name="buttonName" />
                         </div>
                     </form>
                 </div>
-                @{
-                    if (ViewBag.SuccessMessage != null)
-                    {
-                        <div class="messageSent">
-                            @ViewBag.SuccessMessage
-                        </div>
-                    }
-                }
             </div>
         </div>
     </div>

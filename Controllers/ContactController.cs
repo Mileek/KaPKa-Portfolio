@@ -5,13 +5,14 @@ namespace KaPKa.Controllers
 {
     public class ContactController : Controller
     {
+        static List<ContactModel> parameters = new List<ContactModel>();
         [HttpGet]
         public IActionResult Contact()
         {
             return View();
         }
 
-        
+
         [HttpPost]
         [Route("Contact")]
         public IActionResult Contact(ContactModel contact)
@@ -20,15 +21,16 @@ namespace KaPKa.Controllers
             {
                 contact.Topic = ""; //Topic might be blank
             }
-            contact.Send(contact.fromName, contact.fromEmail, contact.Topic, contact.Message);
-            
-            ModelState.Clear();
-            return View();
-        }
 
-        public void button_Click(object sender, EventArgs e)
-        {
-            ViewBag.SuccessMessage = "Success";
+            contact.Send(contact.fromName, contact.fromEmail, contact.Topic, contact.Message);
+
+            if (contact.buttonName == "Send")
+            {
+                return View("_Message");
+            }
+            ModelState.Clear();
+
+            return View();
         }
     }
 }

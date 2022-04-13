@@ -28,6 +28,11 @@ body, html { /*
 
 /*FOOTER SECTION*/
 /**/
+.footer{
+    margin-top:-20px;
+    padding-top:10px;
+    height:50px;
+}
 /*NAVIGATION SECTION*/
 #logoSrc {
     height: 50px;
@@ -1195,19 +1200,24 @@ a.socialLink {
     font-size: 22px;
     letter-spacing: 1px;
 }
+.borderAround{
+    border: 1px solid transparent; /*It is created so that content won't move because of the border !*/
+}
 
 .textA {
     letter-spacing: 1px;
     margin-left: auto;
     margin-right: auto;
-    font-size:17px;
+    font-size: 17px;
 }
 
     .textA a:link,
     .textA a:visited,
-    .textA a:active {
+    .textA a:active,
+    .textA a {
         color: #cccccc;
         text-decoration: none;
+        border: 1px solid transparent;
     }
 
     .textA a:hover {
@@ -1376,7 +1386,7 @@ a.socialLink {
 #introductionA {
     margin-top: 100px;
     margin-bottom: 25px;
-    font-size:18px;
+    font-size: 18px;
 }
 
 #myStudiesA {
@@ -2263,6 +2273,80 @@ a.socialLink {
     font-style: italic;
 }
 
+.contactMessageTile {
+    position: relative;
+    padding: 10px;
+    margin-top: 80px;
+    width: 80%;
+    /*height: 50%;*/
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #33d0cf;
+    -webkit-box-shadow: 0px 0px 40px -15px rgba(51, 208, 207, 1);
+    -moz-box-shadow: 0px 0px 40px -15px rgba(51, 208, 207, 1);
+    box-shadow: 0px 0px 40px -15px rgba(51, 208, 207, 1);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    background-image: url(/Content/Img/contactBg.jpg);
+    background-position: top;
+}
+
+    .contactMessageTile > h5 {
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+        text-align:center;
+        animation: 4s fill-navbar infinite;
+        margin-top: 10%;
+    }
+    .contactMessageTile > h6 {
+        margin-top: 10%;
+        color: #13ed13;
+        text-align: right;
+    }
+    .contactMessageTile a:link,
+    .contactMessageTile a:visited,
+    .contactMessageTile a:active {
+        color: #cccccc;
+        text-decoration: none;
+    }
+
+    .contactMessageTile a:hover {
+        color: #33D0CF;
+        border: 1px solid #33D0CF;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .contactMessageTile > h1 {
+        font-weight: 700;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .contactMessageTile > hr {
+        height: 5px;
+        opacity: 0.4;
+        color: white;
+        margin-top: 20px;
+    }
+#returnContact {
+    font-size: 28px;
+    padding: 5px;
+    margin-top: 10%;
+    text-align: center;
+    display: block;
+    margin-bottom: 2%;
+    border: 1px solid transparent;
+}
+    #returnContact:hover {
+        color: #33D0CF;
+        border: 1px solid #33D0CF;
+    }
+
+/*
 .messageSent {
     position: absolute;
     left: 25%;
@@ -2285,3 +2369,4 @@ a.socialLink {
         opacity: 0;
     }
 }
+*/
