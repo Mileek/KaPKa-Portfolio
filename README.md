@@ -1,17 +1,6 @@
 <div id="top"></div>
 
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
 <p align="center">
   <a href="https://www.linkedin.com/in/kamil-p-kaszuba/"><img src="https://img.shields.io/badge/Linkedin-302f2c?style=for-the-badge&logo=Linkedin&logoColor=blue" alt="Linkedin">
   </a>
@@ -21,33 +10,55 @@
 <br/>
 <br/>
 
+## KaPKa-Portfolio
+KaPKa is a comprehensive portfolio designed to showcase my programming skills. This site offers a deeper insight into my abilities than my GitHub profile, including projects that are not suitable for posting on GitHub. It serves as a stepping stone towards becoming a full-stack developer, enhancing my proficiency in HTML and CSS. The portfolio is built with a responsive design using Bootstrap and follows the ASP.Net MVC model. The backend, written in C#, supports functionalities like the contact form and will be further developed to include more dynamic features.
+
+Please note that this is my previous portfolio. I am currently developing a new one to further demonstrate my growth and skills.
+
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Future Enhancements](#future-enhancements)
+- [Contact](#contact)
+
+## Features
+- **Responsive Design**: Utilizes Bootstrap for a responsive and mobile-friendly interface.
+- **Showcase Projects**: Displays various projects to highlight programming skills and experience.
+- **Modern UI**: Clean and professional design with intuitive navigation.
+- **ASP.Net MVC**: Built using the ASP.Net MVC model for scalable and maintainable code structure.
+- **Contact Form**: Implemented using C# for seamless communication.
+
+## Technologies Used
+- **Frontend**: HTML, CSS, Bootstrap
+- **Backend**: C# (for the contact form and future enhancements)
+- **Framework**: ASP.Net MVC
+- **IDE**: Visual Studio
+
+## Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Mileek/KaPKa-Portfolio.git
+    ```
+2. Open the project in Visual Studio.
+3. Build the solution to restore the required packages.
+
+## Usage
+1. Run the application from Visual Studio.
+2. Open your web browser and navigate to `http://localhost:your_port_number`.
+
+## Future Enhancements
+- **Backend Development**: Further implementation of backend functionalities using C#.
+- **Project Management**: Adding more projects and categorizing them for better organization.
+- **Enhanced Features**: Integration of more dynamic features to improve user experience.
 
 
+## Contact
+For any inquiries or questions, feel free to reach out:
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/Mileek/KaPKa-Portfolio">
-    <img src="https://user-images.githubusercontent.com/95537833/161287553-2eab53ab-3f1f-4760-8330-19e487846e21.png" alt="Logo" width="180" height="140">
-  </a>
-</div>
-  <h2>About Project:</h2></br>
-  <p align="justify"> Kapka is my portfolio to showcase my skills in programming. The site aims to showcase my skills on a deeper level than on GitHub, and includes projects that are not suitable for posting on github. The site is also my stepping stone to becoming a fullstack developer, with it I want to improve my skills in HTML and CSS. It's responsive using bootstrap, and the backend <i>(which will come in the future)</i> uses C#. Everything is written using the ASP.Net MVC model.</p>
-  
+- **GitHub**: [Your GitHub Profile](https://github.com/Mileek)
 
+---
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/kamil-p-kaszuba/
-[product-screenshot]: images/screenshot.png
+Thank you for visiting my portfolio!
